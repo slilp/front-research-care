@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Switch, Route } from "react-router-dom";
+import { Navbar, Footer, PageLoader } from "./component";
+import { Home, Job, Redeem, History, Research, Login, Register } from "./view";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <Switch>
+        <Suspense fallback={<PageLoader></PageLoader>}>
+          <Switch>
+            <Route path="/job" component={Job}></Route>
+            <Route path="/research" component={Research}></Route>
+            <Route path="/redeem" component={Redeem}></Route>
+            <Route path="/history" component={History}></Route>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/register" component={Register}></Route>
+            <Route path="/" component={Home}></Route>
+          </Switch>
+        </Suspense>
+      </Switch>
+      <Footer></Footer>
+    </>
   );
 }
 
