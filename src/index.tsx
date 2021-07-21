@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import Providers from "./Providers";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./style/main.scss";
+import "swiper/swiper-bundle.css";
 
 ReactDOM.render(
   <React.StrictMode>

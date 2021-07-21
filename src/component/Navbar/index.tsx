@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="shadow">
+    <Navbar collapseOnSelect expand="lg" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <b className="h3 text-success">THE RESEARCH CARE</b>
@@ -18,7 +18,7 @@ function NavBar() {
               ค้นหางาน
             </Nav.Link>
             <Nav.Link as={Link} to="/redeem" eventKey="2">
-              เเลกของสมนาคุณ
+              ของสมนาคุณ
             </Nav.Link>
             <Nav.Link as={Link} to="/login" eventKey="3">
               <LoginButton>
