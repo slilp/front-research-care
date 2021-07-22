@@ -1,15 +1,16 @@
 import React from "react";
+import { Section } from "./style";
 import Stat from "./Stat";
 import JobList from "./JobList";
 
 function User() {
   return (
-    <div className="mt-3">
+    <Section className="pt-3">
       <br></br>
       <Stat></Stat>
       <br></br>
       <JobList></JobList>
-    </div>
+    </Section>
   );
 }
 

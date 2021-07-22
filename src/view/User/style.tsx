@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
-export const Section = styled(Container)`
+export const Section = styled.div`
   /* background-color: #fafafa; */
-  min-height: 70vh;
+  min-height: 80vh;
 `;
 
 export const Card = styled.div`
