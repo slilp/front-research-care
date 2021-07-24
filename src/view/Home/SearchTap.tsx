@@ -11,33 +11,34 @@ function SearchSection() {
           <b>ค้นหางานที่ใช่สำหรับคุณ</b>
           <hr></hr>
           <Row>
-            <Col className="m-1">
+            <Col className="m-1 d-flex flex-column align-items-center">
               <p>ประเภทงาน</p>
               <DropdownButton
                 id="dropdown-basic-button"
                 title="ค้นหาตามประเภทงาน"
               >
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                <Dropdown.Item>ทั้งหมด</Dropdown.Item>
+                <Dropdown.Item>ครีมทาหน้า</Dropdown.Item>
+                <Dropdown.Item>เซรั่ม</Dropdown.Item>
+                <Dropdown.Item>ครีมทาตัว</Dropdown.Item>
               </DropdownButton>
             </Col>
-            <Col className="m-1">
+            {/* <Col className="m-1">
               <p>เรียงตาม</p>
               <DropdownButton
                 id="dropdown-basic-button"
                 title="ค้นหาโดยเรียงตาม"
               >
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                <Dropdown.Item>คะเเนน มากไปน้อย</Dropdown.Item>
+                <Dropdown.Item>คะเเนน น้อยไปน้อย</Dropdown.Item>
+                <Dropdown.Item>ค่าตอบเเทน มากไปน้อย</Dropdown.Item>
               </DropdownButton>
-            </Col>
+            </Col> */}
           </Row>
-          <TextSeeAll className="text-right mt-1">
+          {/* <TextSeeAll className="text-right mt-1">
             <AiOutlineClose className="mr-1"></AiOutlineClose>
             <span>ล้างการค้นหา</span>
-          </TextSeeAll>
+          </TextSeeAll> */}
         </SearchBox>
       </Row>
     </SearchTap>

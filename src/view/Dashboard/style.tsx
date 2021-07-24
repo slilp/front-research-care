@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
 
 export const Section = styled.div`
   /* background-color: #fafafa; */
@@ -35,7 +34,7 @@ export const EditProfileBtn = styled.button`
 `;
 
 export const JobPanel = styled.div`
-  height: 7rem;
+  height: 8.5rem;
   padding: 1rem;
   border: 0.15px solid #d3d5db;
   border-radius: 15px;
@@ -49,17 +48,24 @@ export const JobPanel = styled.div`
   }
 `;
 
+export const JobPanelLock = styled.div`
+  height: 8.5rem;
+  padding: 1rem;
+  border: 0.15px solid #d3d5db;
+  border-radius: 15px;
+`;
+
 export const JobSection = styled.div`
   min-height: 10vh;
   border-radius: 15px;
 `;
 
-export const StatusTag = styled.div`
+export const StatusTag = styled.div<{ bgColor?: string }>`
   border-radius: 15px;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  background-color: #ffdbe9;
-  color: #b47a91;
+  background-color: ${(props) => (props.bgColor ? props.bgColor : "#ffdbe9")};
+  color: white;
   text-align: center;
   /* border-bottom: 1px solid #d1638f; */
 `;

@@ -68,7 +68,7 @@ export const GiftImage = styled.div<{ background?: string }>`
           ${props.background}
         )`
       : `url(
-          "https://image.freepik.com/free-photo/layout-cosmetic-makeup-beauty-products_23-2148113429.jpg"
+          "https://media-cdn.bnn.in.th/110159/Apple-iPhone-12-Purple-1-square_medium.jpg"
         )`};
   background-repeat: no-repeat;
   background-size: cover;

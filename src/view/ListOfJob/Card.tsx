@@ -6,7 +6,7 @@ import {
   JobCardContent,
   JobCardSubContent,
 } from "./style";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaGift } from "react-icons/fa";
 
 const shortDesc = (word: string): string => {
   let result = "";
@@ -31,6 +31,9 @@ function Card() {
       </JobCardContent>
       <JobCardSubContent className="pl-3 pr-3">
         <FaStar className="text-warning mr-2"></FaStar>ค่าตอบแทน : 700 บาท
+      </JobCardSubContent>
+      <JobCardSubContent className="pl-3 pr-3">
+        <FaGift className="text-warning mr-2"></FaGift>คะเเนน : 50 คะเเนน
       </JobCardSubContent>
       <hr></hr>
       <p className="pl-3 pr-3 text-secondary">ระยะเวลา : 4 สัปดาห์</p>

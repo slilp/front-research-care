@@ -26,7 +26,7 @@ function Gift() {
           <Col md={6} lg={4} className="p-2">
             <Card className="shadow-sm rounded p-3 text-center" onClick={onBuy}>
               <GiftImage className="rounded"></GiftImage>
-              <p className="text-muted mt-3">IPHONE 12 IPHONE</p>
+              <p className="text-muted mt-3">APPLE iPhone 12</p>
               <Tag className="p-1 rounded">500 คะเเนน</Tag>
             </Card>
           </Col>

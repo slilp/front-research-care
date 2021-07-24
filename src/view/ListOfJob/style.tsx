@@ -3,8 +3,8 @@ import { Col } from "react-bootstrap";
 
 export const JobCardSection = styled(Col)`
   padding: 1rem;
-  max-height: 25rem;
-  min-height: 25rem;
+  max-height: 27rem;
+  min-height: 27rem;
   display: flex;
   justify-content: center;
 `;

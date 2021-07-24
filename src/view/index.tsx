@@ -5,4 +5,5 @@ export { default as Redeem } from "./Redeem";
 export { default as Research } from "./Research";
 export { default as Login } from "./Login";
 export { default as Register } from "./Register";
-export { default as User } from "./User";
+export { default as Dashboard } from "./Dashboard";
+export { default as Info } from "./Info";

@@ -69,7 +69,7 @@ export const TextSeeAll = styled.div`
 export const Divider = styled.div`
   height: 13rem;
 
-  @media (max-width: 576px) {
+  /* @media (max-width: 576px) {
     height: 17rem;
-  }
+  } */
 `;
