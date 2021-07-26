@@ -1,1 +1,1 @@
-export { changeUserDataAsync, fetchRandomUser } from "./auth";
+export { login, logout, checkUser } from "./auth";

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Col } from "react-bootstrap";
 import mainBg from "../../asset/images/gift.jpg";
 
 export const PointShow = styled.div`

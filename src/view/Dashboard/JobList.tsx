@@ -32,7 +32,7 @@ function JobList() {
         </Alert>
         <Row>
           {[1, 2, 3].map((x) => (
-            <Col md={6} lg={4} className="p-1">
+            <Col key={x} md={6} lg={4} className="p-1">
               <JobPanel>
                 <Row>
                   <Col
@@ -63,7 +63,7 @@ function JobList() {
       <JobSection>
         <Row>
           {[4, 5].map((x) => (
-            <Col md={6} lg={4} className="p-1">
+            <Col key={x} md={6} lg={4} className="p-1">
               <JobPanelLock>
                 <Row>
                   <Col xs={8} className="text-break">
@@ -92,7 +92,7 @@ function JobList() {
       <JobSection>
         <Row>
           {[6, 7, 8].map((x) => (
-            <Col md={6} lg={4} className="p-1">
+            <Col key={x} md={6} lg={4} className="p-1">
               <JobPanelLock>
                 <Row>
                   <Col xs={8} className="text-break">

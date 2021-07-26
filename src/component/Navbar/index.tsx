@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { LoginButton } from "./style";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
+import { useAuthSelector } from "../../state/hooks";
 
 function NavBar() {
+  const [loading, setLoading] = useState<boolean>(false);
+  const { signout } = useAuth();
+  const { isAuthenticated } = useAuthSelector();
+
+  const logout = async () => {
+    await signout();
+  };
+
   return (
     <Navbar collapseOnSelect expand="lg" className="shadow-sm">
       <Container>
@@ -20,12 +30,21 @@ function NavBar() {
             <Nav.Link as={Link} to="/redeem" eventKey="2">
               ของสมนาคุณ
             </Nav.Link>
-            <Nav.Link as={Link} to="/login" eventKey="3">
-              <LoginButton>
-                <AiOutlineUser className="mr-1"></AiOutlineUser>
-                เข้าสู่ระบบ
-              </LoginButton>
-            </Nav.Link>
+            {isAuthenticated ? (
+              <Nav.Link eventKey="4">
+                <LoginButton onClick={logout}>
+                  <AiOutlineUser className="mr-1"></AiOutlineUser>
+                  ออกจากระบบ
+                </LoginButton>
+              </Nav.Link>
+            ) : (
+              <Nav.Link as={Link} to="/login" eventKey="3">
+                <LoginButton>
+                  <AiOutlineUser className="mr-1"></AiOutlineUser>
+                  เข้าสู่ระบบ
+                </LoginButton>
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

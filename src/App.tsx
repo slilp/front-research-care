@@ -1,20 +1,17 @@
 import React, { Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { Navbar, Footer, PageLoader, ScrollToTop } from "./component";
-import {
-  Home,
-  Job,
-  Redeem,
-  History,
-  Research,
-  Login,
-  Register,
-  Dashboard,
-  Info,
-} from "./view";
+import useAuth from "../src/hook/useAuth";
+import { useAuthSelector } from "./state/hooks";
+import permissionRoutes from "./routes";
 
 function App() {
+  const { checkAuth } = useAuth();
+  checkAuth();
+  const { isAuthenticated } = useAuthSelector();
+  const { guest, member } = permissionRoutes;
+
   return (
     <>
       <Navbar></Navbar>
@@ -22,15 +19,36 @@ function App() {
       <Switch>
         <Suspense fallback={<PageLoader></PageLoader>}>
           <Switch>
-            <Route path="/job" component={Job}></Route>
-            <Route path="/research/:id" component={Research}></Route>
-            <Route path="/redeem" component={Redeem}></Route>
-            <Route path="/history" component={History}></Route>
-            <Route path="/dashboard" component={Dashboard}></Route>
-            <Route path="/info" component={Info}></Route>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/register" component={Register}></Route>
-            <Route path="/" component={Home}></Route>
+            {isAuthenticated
+              ? member.routes.map((route: any, idx: number) => {
+                  return (
+                    route.component && (
+                      <Route
+                        key={idx}
+                        path={route.path}
+                        exact={route.exact}
+                        render={(props) => <route.component {...props} />}
+                      />
+                    )
+                  );
+                })
+              : guest.routes.map((route: any, idx: number) => {
+                  return (
+                    route.component && (
+                      <Route
+                        key={idx}
+                        path={route.path}
+                        exact={route.exact}
+                        render={(props) => <route.component {...props} />}
+                      />
+                    )
+                  );
+                })}
+            {isAuthenticated ? (
+              <Redirect to={member.redirect.path}></Redirect>
+            ) : (
+              <Redirect to={guest.redirect.path}></Redirect>
+            )}
           </Switch>
         </Suspense>
       </Switch>

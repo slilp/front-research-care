@@ -1,74 +1,121 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit";
+import { signIn, checkToken, LoginPara } from "./actions";
+import { setToken, getToken, removeToken } from "./storage";
 interface AuthUser {
+  user: UserInfo;
+  isAuthenticated: boolean;
+}
+
+interface UserInfo {
+  username: string;
   firstName: string;
   lastName: string;
-  loading: boolean;
-  error: string | undefined | null;
-  user: any;
 }
 
 const initialState: AuthUser = {
-  firstName: "",
-  lastName: "",
-  loading: false,
-  error: null,
-  user: {},
+  user: { username: "", firstName: "", lastName: "" },
+  isAuthenticated: false,
 };
-
-export const fetchRandomUser = createAsyncThunk(
-  "auth/fetchRandomUser",
-  async () => {
-    try {
-      const response = await fetch("https://randomuser.me/api/");
-      const data = await response.json();
-      return data.results[0];
-    } catch (error) {
-      throw Error(error);
-    }
-  }
-);
 
 export const AuthSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setAuthUserOne: (state) => {
-      state.firstName = "one firstName";
-      state.lastName = "one lastName";
+    setAuthUser: (state, action) => {
+      state.user.username = action.payload.username;
+      state.user.firstName = action.payload.firstName;
+      state.user.lastName = action.payload.lastName;
+      state.isAuthenticated = true;
     },
-    setAuthUserTwo: (state) => {
-      state.firstName = "two firstName";
-      state.lastName = "two lastName";
+    clearAuth: (state) => {
+      state.isAuthenticated = false;
+      state.user.username = "";
+      state.user.firstName = "";
+      state.user.lastName = "";
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(fetchRandomUser.pending, (state) => {
-      state.loading = true;
-      state.error = null;
-    });
-    builder.addCase(fetchRandomUser.fulfilled, (state, action) => {
-      state.user = action.payload;
-      state.loading = false;
-    });
-    builder.addCase(fetchRandomUser.rejected, (state, action) => {
-      state.error = action.error.message;
-      state.loading = false;
-    });
-  },
+  // extraReducers: (builder) => {
+  //   builder.addCase(signIn.pending, (state) => {
+  //     state.loading = true;
+  //     state.error = null;
+  //     state.status = false;
+  //   });
+  //   builder.addCase(signIn.fulfilled, (state, action) => {
+  //     state.username = action.payload.username;
+  //     state.firstName = action.payload.firstName;
+  //     state.lastName = action.payload.lastName;
+  //     state.loading = false;
+  //     state.status = true;
+  //   });
+  //   builder.addCase(signIn.rejected, (state, action) => {
+  //     state.error = action.error.message;
+  //     state.loading = false;
+  //   });
+  // },
 });
 
 // Actions
-export const { setAuthUserOne, setAuthUserTwo } = AuthSlice.actions;
+export const { setAuthUser, clearAuth } = AuthSlice.actions;
 
 // Thunks
-export const changeUserDataAsync =
-  () => async (dispatch: any, getState: any) => {
-    if (getState().auth.firstName === "one firstName") {
-      dispatch(setAuthUserTwo());
-    } else {
-      dispatch(setAuthUserOne());
+export const login =
+  (request: LoginPara) => async (dispatch: any, getState: any) => {
+    try {
+      const loginApi = await signIn(request);
+      setToken({ accessToken: "my_token" });
+      if (loginApi) {
+        dispatch(
+          setAuthUser({
+            username: "tester",
+            firstName: "ทดสอบ",
+            lastName: "ระบบ",
+          })
+        );
+        return true;
+      } else {
+        dispatch(clearAuth());
+        return false;
+      }
+    } catch (error) {
+      dispatch(clearAuth());
+      throw Error(error);
     }
   };
+
+export const logout = () => async (dispatch: any) => {
+  dispatch(clearAuth());
+  removeToken();
+};
+
+export const checkUser = () => async (dispatch: any) => {
+  try {
+    const token = getToken();
+    if (token) {
+      const check = await checkToken();
+      if (check) {
+        dispatch(
+          setAuthUser({
+            username: "tester",
+            firstName: "ทดสอบ",
+            lastName: "ระบบ",
+          })
+        );
+        return true;
+      } else {
+        dispatch(clearAuth());
+        removeToken();
+        return false;
+      }
+    } else {
+      dispatch(clearAuth());
+      removeToken();
+      return false;
+    }
+  } catch (error) {
+    dispatch(clearAuth());
+    removeToken();
+    throw Error(error);
+  }
+};
 
 export default AuthSlice.reducer;

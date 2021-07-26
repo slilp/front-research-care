@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
+import useAuth from "../../hook/useAuth";
 import {
   Section,
   CardLogin,
@@ -11,30 +12,26 @@ import {
 } from "./style";
 import IconMassage from "../../asset/images/facial-massage.png";
 import { FaFacebook } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { setAuthUserOne, setAuthUserTwo } from "../../state/auth";
-import { useAuth } from "../../state/hooks";
-import { fetchRandomUser } from "../../state/actions";
 
 function Login() {
+  const [loading, setLoading] = useState<boolean>(false);
   const history = useHistory();
-  const dispatch = useDispatch();
+
+  const { signin } = useAuth();
+
   const toRegisterPage = () => {
     history.push("/register");
   };
 
-  const data = useAuth();
-
-  const changeUserOne = () => {
-    dispatch(setAuthUserOne());
-  };
-
-  const changeUserTwo = () => {
-    dispatch(setAuthUserTwo());
-  };
-
-  const changeWhat = () => {
-    dispatch(fetchRandomUser());
+  const submitLogin = async () => {
+    try {
+      setLoading(true);
+      const response = await signin("slil", "ssss");
+      console.log("response", response);
+      history.push("/dashboard");
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   return (
@@ -55,7 +52,9 @@ function Login() {
             <Form.Control type="password" />
           </Form.Group>
           <p className="text-muted text-right mb-3">ลืมรหัสผ่าน ?</p>
-          <LoginButton type="button">เข้าสู่ระบบ</LoginButton>
+          <LoginButton type="button" onClick={submitLogin} disabled={loading}>
+            เข้าสู่ระบบ
+          </LoginButton>
           <hr className="w-75 mt-4"></hr>
           <p className="mb-2 text-center text-muted">หรือเข้าสู่ระบบด้วย</p>
           <br></br>

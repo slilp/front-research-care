@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { BsBriefcase, BsHeart, BsXCircle, BsPerson } from "react-icons/bs";
-import { FaCheckCircle, FaLock, FaBell } from "react-icons/fa";
+import { BsBriefcase } from "react-icons/bs";
+import { FaCheckCircle, FaLock } from "react-icons/fa";
 import { BsFillXCircleFill } from "react-icons/bs";
 import Zoom from "react-medium-image-zoom";
 import { ResearchCard, ImageUpload } from "./style";
