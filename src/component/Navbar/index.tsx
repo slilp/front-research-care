@@ -34,7 +34,7 @@ function NavBar() {
             </Nav.Link>
             {isAuthenticated ? (
               <>
-                <Nav.Link as={Link} to="/dashboard" eventKey="2">
+                <Nav.Link as={Link} to="/dashboard" eventKey="4">
                   Dashboard
                 </Nav.Link>
                 <Nav.Link eventKey="4">

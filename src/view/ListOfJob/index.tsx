@@ -7,7 +7,7 @@ function ListOfJob() {
   const { jobList, loading } = useJobList();
 
   return (
-    <Container>
+    <Container className="mb-5">
       <h5>
         {loading ? <b>งานที่พบ 0 งาน</b> : <b>งานที่พบ {jobList.length} งาน</b>}
       </h5>

@@ -29,7 +29,7 @@ function Research() {
   //   };
 
   return (
-    <Container className="pt-3">
+    <Container className="pt-3 mb-5">
       <br></br>
       <h5>
         <BsBriefcase className="pr-2 h2"></BsBriefcase>อัพโหลดงานของคุณ
