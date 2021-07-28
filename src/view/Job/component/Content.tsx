@@ -1,7 +1,7 @@
-import React from "react";
-import { Content, RegisterJob } from "./style";
+import React, { useState } from "react";
+import { Content, RegisterJob } from "../style";
 import { Row, Col } from "react-bootstrap";
-import { WrapText } from "../../component";
+import { WrapText } from "../../../component";
 import {
   BsPersonCheck,
   BsFlag,
@@ -11,8 +11,14 @@ import {
 } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import LabDesc from "./LabDesc";
+import { useHistory } from "react-router-dom";
+import { useAuthSelector } from "../../../state/hooks";
 
 function ContentSection() {
+  const history = useHistory();
+
+  const { isAuthenticated } = useAuthSelector();
+
   const content = `Water, Methyl Trimethicone, Butylene Glycol, Peg-100 Stearate,
             Dimethicone, Cetyl Ricinoleate, Silica, Olea Europaea (Olive) Fruit
             Oil, Glycerin, Behenyl Alcohol, Cucumis Sativus (Cucumber) Fruit
@@ -30,6 +36,14 @@ function ContentSection() {
             Carbomer, Tromethamine, Sorbic Acid, Chlorphenesin, Phenoxyethanol,
             Mica, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492,
             Ci 77499`;
+
+  const onSubmit = () => {
+    if (isAuthenticated) {
+      history.push("/dashboard");
+    } else {
+      history.push("/login");
+    }
+  };
 
   return (
     <Content className="p-3 p-md-5">
@@ -103,7 +117,9 @@ function ContentSection() {
           <p className="text-muted ml-5">50 คน</p>
         </Col>
         <Col md={12} className="d-flex justify-content-center">
-          <RegisterJob className="mt-4 mb-4">สมัครเข้าร่วมโครงการ</RegisterJob>
+          <RegisterJob className="mt-4 mb-4" onClick={onSubmit}>
+            สมัครเข้าร่วมโครงการ
+          </RegisterJob>
         </Col>
       </Row>
     </Content>

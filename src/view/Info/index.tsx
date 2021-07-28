@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { ProfileImage } from "./style";
 import { BsPerson } from "react-icons/bs";
-import RedeemHistory from "./RedeemHistory";
+import { RedeemHistory } from "./component";
+import { ResearchExample } from "../../asset/images";
 
 function Info() {
   return (
@@ -13,8 +14,8 @@ function Info() {
       </h5>
       <Row>
         <Col md={6} className="text-center">
-          <ProfileImage src="https://i.pinimg.com/originals/a1/e3/e6/a1e3e618b4f5d9b5b45ab3b41d90a342.jpg"></ProfileImage>
-          <h5 className="mt-4">Lisa_blickpink</h5>
+          <ProfileImage src={ResearchExample}></ProfileImage>
+          <h5 className="mt-4">tester_account</h5>
         </Col>
         <Col md={6}>
           <Form>

@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 function PageLoader() {
   return (
-    <div>
-      <h1>LOADING...</h1>
-    </div>
+    <Container className="d-flex h-100 align-items-center justify-content-center">
+      <h5>กำลังโหลด...</h5>
+    </Container>
   );
 }
 

@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import authSlice from "./auth";
+import jobSlice from "./job";
 
 const store = configureStore({
   reducer: {
     auth: authSlice,
+    job: jobSlice,
   },
 });
 

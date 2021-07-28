@@ -4,9 +4,6 @@ export interface LoginPara {
 }
 
 export const signIn = async ({ username, password }: LoginPara) => {
-  console.log(username);
-  console.log(password);
-
   return true;
 };
 

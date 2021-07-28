@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Navbar, Footer, PageLoader, ScrollToTop } from "./component";
-import useAuth from "../src/hook/useAuth";
+import useAuth from "./hook/useAuth";
 import { useAuthSelector } from "./state/hooks";
 import permissionRoutes from "./routes";
 

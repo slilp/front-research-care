@@ -1,8 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Header from "./Header";
-import Point from "./Point";
-import Gift from "./Gift";
+import { Header, Point, Gift } from "./component";
 import { BiTrophy } from "react-icons/bi";
 
 function Redeem() {

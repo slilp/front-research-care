@@ -1,7 +1,6 @@
 import React from "react";
 import { Section } from "./style";
-import Stat from "./Stat";
-import JobList from "./JobList";
+import { Stat, JobList } from "./component";
 
 function User() {
   return (

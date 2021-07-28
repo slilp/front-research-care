@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mainBg from "../../asset/images/gift.jpg";
+import { Iphone12, Gift } from "../../asset/images";
 
 export const PointShow = styled.div`
   bottom: 0;
@@ -21,7 +21,7 @@ export const PointBalance = styled.div`
 
 export const HeaderImage = styled.div`
   height: 150px;
-  background-image: url(${mainBg});
+  background-image: url(${Gift});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,7 +67,7 @@ export const GiftImage = styled.div<{ background?: string }>`
           ${props.background}
         )`
       : `url(
-          "https://media-cdn.bnn.in.th/110159/Apple-iPhone-12-Purple-1-square_medium.jpg"
+          ${Iphone12}
         )`};
   background-repeat: no-repeat;
   background-size: cover;

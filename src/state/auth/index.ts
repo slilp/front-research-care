@@ -34,24 +34,6 @@ export const AuthSlice = createSlice({
       state.user.lastName = "";
     },
   },
-  // extraReducers: (builder) => {
-  //   builder.addCase(signIn.pending, (state) => {
-  //     state.loading = true;
-  //     state.error = null;
-  //     state.status = false;
-  //   });
-  //   builder.addCase(signIn.fulfilled, (state, action) => {
-  //     state.username = action.payload.username;
-  //     state.firstName = action.payload.firstName;
-  //     state.lastName = action.payload.lastName;
-  //     state.loading = false;
-  //     state.status = true;
-  //   });
-  //   builder.addCase(signIn.rejected, (state, action) => {
-  //     state.error = action.error.message;
-  //     state.loading = false;
-  //   });
-  // },
 });
 
 // Actions
@@ -66,7 +48,7 @@ export const login =
       if (loginApi) {
         dispatch(
           setAuthUser({
-            username: "tester",
+            username: request.username,
             firstName: "ทดสอบ",
             lastName: "ระบบ",
           })

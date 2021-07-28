@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { JobPanel, JobSection, StatusTag, JobPanelLock } from "./style";
+import { JobPanel, JobSection, StatusTag, JobPanelLock } from "../style";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import {
   BsBriefcase,

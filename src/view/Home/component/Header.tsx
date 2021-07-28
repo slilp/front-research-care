@@ -1,9 +1,9 @@
 import React from "react";
-import { HeaderImage, HeaderText, SubHeaderText, MassagePhoto } from "./style";
+import { HeaderImage, HeaderText, SubHeaderText, MassagePhoto } from "../style";
 import { Container, Row, Col } from "react-bootstrap";
-import IconMassage from "../../asset/images/facial-massage.png";
-import IconSerum from "../../asset/images/serum.png";
-import IconIrritation from "../../asset/images/irritation.png";
+import IconMassage from "../../../asset/images/facial-massage.png";
+import IconSerum from "../../../asset/images/serum.png";
+import IconIrritation from "../../../asset/images/irritation.png";
 
 function Header() {
   return (

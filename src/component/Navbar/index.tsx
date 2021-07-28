@@ -31,12 +31,17 @@ function NavBar() {
               ของสมนาคุณ
             </Nav.Link>
             {isAuthenticated ? (
-              <Nav.Link eventKey="4">
-                <LoginButton onClick={logout}>
-                  <AiOutlineUser className="mr-1"></AiOutlineUser>
-                  ออกจากระบบ
-                </LoginButton>
-              </Nav.Link>
+              <>
+                <Nav.Link as={Link} to="/dashboard" eventKey="2">
+                  Dashboard
+                </Nav.Link>
+                <Nav.Link eventKey="4">
+                  <LoginButton onClick={logout}>
+                    <AiOutlineUser className="mr-1"></AiOutlineUser>
+                    ออกจากระบบ
+                  </LoginButton>
+                </Nav.Link>
+              </>
             ) : (
               <Nav.Link as={Link} to="/login" eventKey="3">
                 <LoginButton>

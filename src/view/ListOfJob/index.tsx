@@ -1,34 +1,35 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { Row, Container } from "react-bootstrap";
-import Card from "./Card";
+import { Card, useJobList } from "./component";
 import { JobCardSection } from "./style";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-
 function ListOfJob() {
-  let query = useQuery();
-  const searchType = query.get("type");
-  const searchSort = query.get("sort");
-
-  const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const { jobList, loading } = useJobList();
 
   return (
     <Container>
       <h5>
-        <b>
-          งานที่พบ 8 งาน
-          {/* {searchSort} {searchType} */}
-        </b>
+        {loading ? <b>งานที่พบ 0 งาน</b> : <b>งานที่พบ {jobList.length} งาน</b>}
       </h5>
       <Row>
-        {list.map((value) => (
-          <JobCardSection key={value} sm={12} md={6} lg={3}>
-            <Card></Card>
-          </JobCardSection>
-        ))}
+        {loading ? (
+          <div className="h-100 w-100 d-flex justify-content-center align-items-center">
+            กำลังโหลด...
+          </div>
+        ) : (
+          jobList.map((value, idx) => (
+            <JobCardSection key={idx} sm={12} md={6} lg={3}>
+              <Card
+                image={value.image}
+                title={value.title}
+                desc={value.desc}
+                point={value.point}
+                period={value.period}
+                salary={value.salary}
+              ></Card>
+            </JobCardSection>
+          ))
+        )}
       </Row>
     </Container>
   );

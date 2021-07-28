@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { JobExample } from "../../asset/images";
 
 export const Section = styled.div`
   background-color: #fafafa;
 `;
 
 export const HeaderSection = styled.div`
-  background-color: #bde4a8;
+  background-color: #eabfb9;
 `;
 
 export const Content = styled.div`
@@ -33,7 +34,7 @@ export const RegisterJob = styled.button`
 export const ProductImageBox = styled.div`
   height: 300px;
   width: 100%;
-  background-image: url("https://www.cosmenet.in.th/upload/iblock/f87/estee-lauder-advanced-night-repair-eye-600.jpg");
+  background-image: ${`url(${JobExample})`};
   background-repeat: no-repeat;
   border-radius: 15px;
   background-size: 100%;

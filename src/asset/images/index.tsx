@@ -1,0 +1,12 @@
+export { default as Gift } from "./gift.jpg";
+export { default as FacialMessageIcon } from "./facial-massage.png";
+export { default as IrritationIcon } from "./irritation.png";
+export { default as LeftArrowIcon } from "./left-arrow.png";
+export { default as RightArrowIcon } from "./right-arrow.png";
+export { default as MainBg } from "./main-bg.jpg";
+export { default as SerumIcon } from "./serum.png";
+export { default as JobExample } from "./job-example.jpg";
+export { default as JobInfoExample } from "./job-info-example.jpg";
+export { default as Iphone12 } from "./iphone12.png";
+export { default as Ipad } from "./ipad.jpg";
+export { default as ResearchExample } from "./research-example.jpg";

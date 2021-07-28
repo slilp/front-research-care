@@ -1,6 +1,6 @@
 import React from "react";
-import { HeaderSection, ProductImageBox } from "./style";
-import { Container, Row, Col } from "react-bootstrap";
+import { HeaderSection, ProductImageBox } from "../style";
+import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Navigation,

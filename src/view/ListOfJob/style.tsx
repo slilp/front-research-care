@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
+import { JobExample } from "../../asset/images";
 
 export const JobCardSection = styled(Col)`
   padding: 1rem;
@@ -29,7 +30,7 @@ export const JobCardHead = styled.div<{ background: string }>`
   background-image: ${(props: any) =>
     props.background
       ? `url(
-          ${props.background}
+          ${JobExample}
         )`
       : `url(
           "https://image.freepik.com/free-photo/layout-cosmetic-makeup-beauty-products_23-2148113429.jpg"

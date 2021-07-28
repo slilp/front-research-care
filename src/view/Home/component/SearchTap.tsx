@@ -1,7 +1,6 @@
 import React from "react";
-import { SearchTap, SearchBox, TextSeeAll } from "./style";
+import { SearchTap, SearchBox } from "../style";
 import { Row, Col, DropdownButton, Dropdown } from "react-bootstrap";
-import { AiOutlineClose } from "react-icons/ai";
 
 function SearchSection() {
   return (

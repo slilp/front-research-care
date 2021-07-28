@@ -1,5 +1,5 @@
 import React from "react";
-import { LabDescSection } from "./style";
+import { LabDescSection } from "../style";
 import { Row, Col } from "react-bootstrap";
 
 function LabDesc() {

@@ -1,6 +1,5 @@
 import React from "react";
-import Header from "./Header";
-import SearchTap from "./SearchTap";
+import { Header, SearchTap } from "./component";
 import ListOfJob from "../ListOfJob";
 import { Divider } from "./style";
 

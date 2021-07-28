@@ -26,8 +26,7 @@ function Login() {
   const submitLogin = async () => {
     try {
       setLoading(true);
-      const response = await signin("slil", "ssss");
-      console.log("response", response);
+      await signin("tester", "tester");
       history.push("/dashboard");
     } catch (error) {
       setLoading(false);

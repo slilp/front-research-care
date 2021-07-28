@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import { StatCard } from "./style";
+import { StatCard } from "../style";
 import { BsBriefcase, BsHeart, BsXCircle, BsPerson } from "react-icons/bs";
 
 function Stat() {
