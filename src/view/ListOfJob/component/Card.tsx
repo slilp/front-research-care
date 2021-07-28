@@ -1,11 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import {
-  JobCard,
-  JobCardHead,
-  JobCardContent,
-  JobCardSubContent,
-} from "../style";
+import { JobCard, JobCardHead, JobCardContent, JobCardTitle } from "../style";
 import { FaStar, FaGift } from "react-icons/fa";
 
 const shortDesc = (word: string): string => {
@@ -32,14 +27,14 @@ function Card({ image, title, desc, salary, point, period }: CardProp) {
   return (
     <JobCard className="shadow" onClick={selectJob}>
       <JobCardHead background={image}></JobCardHead>
-      <p className="text-success pl-3 pr-3 mt-3">{title}</p>
+      <JobCardTitle className="pl-3 pr-3 mt-3">{title}</JobCardTitle>
       <JobCardContent className="pl-3 pr-3">{shortDesc(desc)}</JobCardContent>
-      <JobCardSubContent className="pl-3 pr-3">
+      <div className="pl-3 pr-3">
         <FaStar className="text-warning mr-2"></FaStar>ค่าตอบแทน : {salary} บาท
-      </JobCardSubContent>
-      <JobCardSubContent className="pl-3 pr-3">
+      </div>
+      <div className="pl-3 pr-3">
         <FaGift className="text-warning mr-2"></FaGift>คะเเนน : {point} คะเเนน
-      </JobCardSubContent>
+      </div>
       <hr></hr>
       <p className="pl-3 pr-3 text-secondary">ระยะเวลา : {period} สัปดาห์</p>
     </JobCard>

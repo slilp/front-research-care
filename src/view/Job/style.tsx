@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { JobExample } from "../../asset/images";
+import { DARK_PINK, DARK_PINK_HOVER, LIGHT_BROWN } from "../../style/constant";
 
 export const Section = styled.div`
   background-color: #fafafa;
 `;
 
 export const HeaderSection = styled.div`
-  background-color: #eabfb9;
+  background-color: ${LIGHT_BROWN};
 `;
 
 export const Content = styled.div`
@@ -22,12 +23,12 @@ export const LabDescSection = styled.div`
 
 export const RegisterJob = styled.button`
   padding: 1rem;
-  background-color: #f3a010;
+  background-color: ${DARK_PINK};
   color: white;
   border-radius: 15px;
   border: none;
   &:hover {
-    background-color: #f3af39;
+    background-color: ${DARK_PINK_HOVER};
   }
 `;
 

@@ -10,3 +10,4 @@ export { default as JobInfoExample } from "./job-info-example.jpg";
 export { default as Iphone12 } from "./iphone12.png";
 export { default as Ipad } from "./ipad.jpg";
 export { default as ResearchExample } from "./research-example.jpg";
+export { default as Logo } from "./logo.jpg";

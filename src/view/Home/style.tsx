@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Col } from "react-bootstrap";
 import mainBg from "../../asset/images/main-bg.jpg";
 import mainLgBg from "../../asset/images/main-bg-lg.jpg";
+import { DropdownButton } from "react-bootstrap";
 
 export const SearchTap = styled.div`
   bottom: 0;
@@ -73,3 +74,5 @@ export const Divider = styled.div`
     height: 17rem;
   } */
 `;
+
+export const DropdownSearch = styled(DropdownButton)``;

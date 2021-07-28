@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
 import { JobExample } from "../../asset/images";
+import { DARK_BROWN } from "../../style/constant";
 
 export const JobCardSection = styled(Col)`
   padding: 1rem;
@@ -46,4 +47,6 @@ export const JobCardHead = styled.div<{ background: string }>`
 export const JobCardContent = styled.div`
   height: 6rem;
 `;
-export const JobCardSubContent = styled.div``;
+export const JobCardTitle = styled.p`
+  color: ${DARK_BROWN};
+`;

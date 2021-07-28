@@ -1,0 +1,11 @@
+export const DARK = "#02062d";
+export const BLUE = "#081c49";
+export const PINK = "#f1b0d2";
+export const DARK_PINK = "#eb65a3";
+export const DARK_PINK_HOVER = "#eb65a4c7";
+export const RED = "#9c1e3c";
+export const DARK_BROWN = "#4c4236";
+export const LIGHT_BROWN = "#9a928c";
+export const GREY = "#a9adaf";
+export const BROWN = "#d6bbb4";
+export const MEDIUM_PINK = "#ba8384";

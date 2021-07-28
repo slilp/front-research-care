@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { LoginButton } from "./style";
+import { LoginButton, LogoBrand, LogoText } from "./style";
+import { Logo } from "../../asset/images";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
@@ -19,7 +20,8 @@ function NavBar() {
     <Navbar collapseOnSelect expand="lg" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <b className="h3 text-success">THE RESEARCH CARE</b>
+          <LogoBrand src={Logo}></LogoBrand>
+          <LogoText>The Research Care</LogoText>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

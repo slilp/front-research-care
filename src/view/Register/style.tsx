@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
+import { DARK_PINK, DARK_PINK_HOVER, BLUE } from "../../style/constant";
 
 export const Section = styled(Container)`
   height: 80vh;
@@ -8,7 +9,7 @@ export const Section = styled(Container)`
 export const CardLogin = styled.div`
   width: 40%;
   border-radius: 15px;
-  border-bottom: 15px solid #98bf64;
+  border-bottom: 15px solid ${BLUE};
 
   @media (max-width: 768px) {
     width: 50%;
@@ -30,12 +31,12 @@ export const LoginButton = styled.button`
   border-radius: 50px;
   border: none;
   color: white;
-  background-color: #9dc767;
+  background-color: ${DARK_PINK};
   padding: 0.5rem;
   font-size: large;
   width: 100%;
   &:hover {
-    background-color: #abcc81;
+    background-color: ${DARK_PINK_HOVER};
   }
 `;
 

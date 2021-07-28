@@ -21,6 +21,7 @@ function Gift() {
           confirmButtonText: "ตกลง",
           showCancelButton: true,
           cancelButtonText: "ยกเลิก",
+          confirmButtonColor: "#eb65a3",
         }).then((result) => {
           if (result.isConfirmed) {
             MySwal.fire({
@@ -33,6 +34,7 @@ function Gift() {
               MySwal.fire({
                 icon: "success",
                 text: "เเลกรางวัลสำเร็จ",
+                confirmButtonColor: "#eb65a3",
                 confirmButtonText: "ตกลง",
               });
             }, 1000);

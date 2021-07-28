@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchTap, SearchBox } from "../style";
+import { SearchTap, SearchBox, DropdownSearch } from "../style";
 import { Row, Col, DropdownButton, Dropdown } from "react-bootstrap";
 
 function SearchSection() {
@@ -12,15 +12,16 @@ function SearchSection() {
           <Row>
             <Col className="m-1 d-flex flex-column align-items-center">
               <p>ประเภทงาน</p>
-              <DropdownButton
+              <DropdownSearch
                 id="dropdown-basic-button"
                 title="ค้นหาตามประเภทงาน"
+                variant="secondary"
               >
                 <Dropdown.Item>ทั้งหมด</Dropdown.Item>
                 <Dropdown.Item>ครีมทาหน้า</Dropdown.Item>
                 <Dropdown.Item>เซรั่ม</Dropdown.Item>
                 <Dropdown.Item>ครีมทาตัว</Dropdown.Item>
-              </DropdownButton>
+              </DropdownSearch>
             </Col>
             {/* <Col className="m-1">
               <p>เรียงตาม</p>
