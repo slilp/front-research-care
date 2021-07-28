@@ -19,7 +19,7 @@ function Register() {
   };
 
   return (
-    <Section className="d-flex flex-column align-items-center pt-5">
+    <Section className="d-flex flex-column align-items-center pt-5 mb-5">
       <MassagePhoto src={IconMassage}></MassagePhoto>
       <br></br>
       <h3>เข้าสู่ระบบ</h3>

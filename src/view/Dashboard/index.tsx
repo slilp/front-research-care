@@ -4,7 +4,7 @@ import { Stat, JobList } from "./component";
 
 function User() {
   return (
-    <Section className="pt-3">
+    <Section className="pt-3 mb-5">
       <br></br>
       <Stat></Stat>
       <br></br>
