@@ -26,7 +26,7 @@ export const HeaderImage = styled.div`
   justify-content: end;
   box-shadow: inset 0 0 10px #ffffff;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     height: 20rem;
   }
 
@@ -39,21 +39,22 @@ export const HeaderText = styled.p`
   font-size: 2rem;
   font-weight: bold;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 1.3rem;
   }
 `;
 
 export const SubHeaderText = styled.div`
   font-size: 1.2rem;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 1rem;
   }
 `;
 
 export const MassagePhoto = styled.img`
   height: 8rem;
-  @media (max-width: 768px) {
+
+  @media (max-width: 992px) {
     height: 5rem;
   }
 `;

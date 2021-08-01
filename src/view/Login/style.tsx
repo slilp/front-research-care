@@ -11,8 +11,8 @@ export const CardLogin = styled.div`
   border-radius: 15px;
   border-bottom: 15px solid ${BLUE};
 
-  @media (max-width: 768px) {
-    width: 50%;
+  @media (max-width: 992px) {
+    width: 60%;
   }
 
   @media (max-width: 576px) {
