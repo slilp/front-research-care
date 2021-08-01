@@ -5,14 +5,14 @@ import { Divider } from "./style";
 
 function Home() {
   return (
-    <>
+    <div>
       <div className="position-relative">
         <Header></Header>
         <SearchTap></SearchTap>
       </div>
       <Divider></Divider>
       <ListOfJob></ListOfJob>
-    </>
+    </div>
   );
 }
 
