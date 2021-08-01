@@ -10,9 +10,14 @@ export const SearchTap = styled.div`
   transform: translate(0, 80%);
 `;
 
-export const SearchBox = styled(Col)`
+export const SearchBox = styled.div`
   background-color: white;
   border-radius: 15px;
+  min-width: 500px;
+
+  @media (max-width: 992px) {
+    min-width: 350px;
+  }
 `;
 
 export const HeaderImage = styled.div`
