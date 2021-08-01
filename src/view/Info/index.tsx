@@ -35,7 +35,7 @@ function Info() {
               <Form.Label className="text-muted">ที่อยู่จัดส่ง</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
-            <Button variant="light" type="submit">
+            <Button variant="light" type="button">
               อัพเดทข้อมูล
             </Button>
           </Form>

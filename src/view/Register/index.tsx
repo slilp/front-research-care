@@ -43,7 +43,7 @@ function Register() {
             <Form.Label>เบอร์โทร</Form.Label>
             <Form.Control type="text" />
           </Form.Group>
-          <LoginButton type="submit">สมัครสมาชิก</LoginButton>
+          <LoginButton type="button">สมัครสมาชิก</LoginButton>
           <hr className="w-75 mt-4"></hr>
           <p className="mb-2 text-center text-muted">หรือสมัครสมาชิกด้วย</p>
           <br></br>
