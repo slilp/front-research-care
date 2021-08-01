@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchTap, SearchBox, DropdownSearch } from "../style";
-import { Row, Col, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 function SearchSection() {
   return (
