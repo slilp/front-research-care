@@ -10,11 +10,8 @@ import {
 } from "react-icons/bs";
 import { BsFillXCircleFill } from "react-icons/bs";
 import { FaCheckCircle } from "react-icons/fa";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
 function JobList() {
-  const MySwal = withReactContent(Swal.mixin({}));
   const history = useHistory();
 
   const toResearchInfo = (x: number) => {

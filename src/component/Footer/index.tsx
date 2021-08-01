@@ -1,4 +1,3 @@
-import React from "react";
 import { Section, LogoBrand, SubSection, SocialIcon } from "./style";
 import { Container, Row, Col } from "react-bootstrap";
 import { Logo } from "../../asset/images";

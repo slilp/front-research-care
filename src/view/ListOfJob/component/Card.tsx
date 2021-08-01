@@ -1,4 +1,3 @@
-import React from "react";
 import { useHistory } from "react-router-dom";
 import { JobCard, JobCardHead, JobCardContent, JobCardTitle } from "../style";
 import { FaStar, FaGift } from "react-icons/fa";

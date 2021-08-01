@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
 import mainBg from "../../asset/images/main-bg.jpg";
-import mainLgBg from "../../asset/images/main-bg-lg.jpg";
 import { DropdownButton } from "react-bootstrap";
 
 export const SearchTap = styled.div`

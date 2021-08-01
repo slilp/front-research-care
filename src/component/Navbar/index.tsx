@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import { LoginButton, LogoBrand, LogoText, LogoutButton } from "./style";
+import { LoginButton, LogoBrand, LogoText } from "./style";
 import { Logo } from "../../asset/images";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -9,7 +8,6 @@ import { useAuthSelector } from "../../state/hooks";
 import Hidden from "@material-ui/core/Hidden";
 
 function NavBar() {
-  const [loading, setLoading] = useState<boolean>(false);
   const { signout } = useAuth();
   const { isAuthenticated, user } = useAuthSelector();
 

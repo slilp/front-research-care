@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { fetchJobList } from "../../../state/actions";
 import { useAppDispatch } from "../../../state";
 import { useJobSelector } from "../../../state/hooks";

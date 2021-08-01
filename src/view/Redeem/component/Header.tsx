@@ -1,4 +1,3 @@
-import React from "react";
 import { HeaderImage } from "../style";
 
 function Header() {

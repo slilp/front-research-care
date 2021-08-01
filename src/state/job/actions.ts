@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { MainResponse } from "../type";
-import { JobInfo, SearchRequest } from "./type";
+import { JobInfo } from "./type";
 
 const mockList: MainResponse<JobInfo[]> = {
   status: true,

@@ -1,4 +1,3 @@
-import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { Card, GiftImage, Tag } from "../style";
 import Swal from "sweetalert2";

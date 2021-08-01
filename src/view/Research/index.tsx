@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { BsBriefcase } from "react-icons/bs";
@@ -18,12 +18,10 @@ import {
   Button,
   Section,
   ImageBox,
-  Image,
   DeleteImg,
 } from "./style";
 import { useParams } from "react-router-dom";
 import { GoPlus, GoX } from "react-icons/go";
-import Zoom from "react-medium-image-zoom";
 
 interface AddImageProps {
   initImages?: ImageInfo[];

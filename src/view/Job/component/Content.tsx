@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Content, RegisterJob } from "../style";
 import { Row, Col } from "react-bootstrap";
 import { WrapText } from "../../../component";

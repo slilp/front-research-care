@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
-import { DARK_PINK, DARK_PINK_HOVER, BLUE, BROWN } from "../../style/constant";
+import { DARK_PINK, DARK_PINK_HOVER, BLUE } from "../../style/constant";
 
 export const Section = styled(Container)`
   min-height: 80vh;
