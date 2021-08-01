@@ -10,8 +10,11 @@ import {
 } from "react-icons/bs";
 import { BsFillXCircleFill } from "react-icons/bs";
 import { FaCheckCircle } from "react-icons/fa";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 function JobList() {
+  const MySwal = withReactContent(Swal.mixin({}));
   const history = useHistory();
 
   const toResearchInfo = (x: number) => {
@@ -91,22 +94,28 @@ function JobList() {
       </h5>
       <JobSection>
         <Row>
-          {[6, 7, 8].map((x) => (
+          {[6, 7].map((x) => (
             <Col key={x} md={6} lg={4} className="p-1">
-              <JobPanelLock>
+              <JobPanel>
                 <Row>
-                  <Col xs={8} className="text-break">
+                  <Col
+                    xs={8}
+                    className="text-break"
+                    onClick={() => toResearchInfo(x)}
+                  >
                     <p className="mb-0">รหัส RS00{x}</p>
                     <p>เซรั่มผิวหน้า</p>
                     <p className="text-muted">
-                      <BsStopwatch className="mr-2"></BsStopwatch>ครั้งที่ 2/3
+                      <BsStopwatch className="mr-2"></BsStopwatch>ครั้งที่ 3/3
                     </p>
                   </Col>
                   <Col xs={4}>
-                    <StatusTag bgColor="#98bf64">สำเร็จ</StatusTag>
+                    <StatusTag className="mb-2" bgColor="#98bf64">
+                      สำเร็จ
+                    </StatusTag>
                   </Col>
                 </Row>
-              </JobPanelLock>
+              </JobPanel>
             </Col>
           ))}
         </Row>
