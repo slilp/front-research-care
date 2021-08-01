@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Col } from "react-bootstrap";
 import mainBg from "../../asset/images/main-bg.jpg";
 import { DropdownButton } from "react-bootstrap";
 
