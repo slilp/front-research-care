@@ -9,6 +9,7 @@ const Dashboard = lazy(() => import("./view/Dashboard"));
 const Info = lazy(() => import("./view/Info"));
 const Research = lazy(() => import("./view/Research"));
 const Job = lazy(() => import("./view/Job"));
+const Gift = lazy(() => import("./view/Gift"));
 
 const routes = {
   login: {
@@ -51,6 +52,11 @@ const routes = {
     name: "Dashboard",
     component: Dashboard,
   },
+  gift: {
+    path: "/gift",
+    name: "Gift",
+    component: Gift,
+  },
   history: {
     path: "/history",
     name: "History",
@@ -79,6 +85,7 @@ const member = {
     routes.info,
     routes.job,
     routes.research,
+    routes.gift,
     routes.home,
   ],
   redirect: {

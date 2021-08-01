@@ -34,7 +34,7 @@ function Login() {
   };
 
   return (
-    <Section className="d-flex flex-column align-items-center pt-5">
+    <Section className="d-flex flex-column align-items-center pt-5 mb-5">
       <MassagePhoto src={IconMassage}></MassagePhoto>
       <br></br>
       <h3>เข้าสู่ระบบ</h3>
@@ -44,11 +44,11 @@ function Login() {
         <Form className="p-4">
           <Form.Group className="mb-4">
             <Form.Label>ชื่อผู้ใช้งาน</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control type="text" value="tester" />
           </Form.Group>
           <Form.Group className="mb-1">
             <Form.Label>รหัสผ่าน</Form.Label>
-            <Form.Control type="password" />
+            <Form.Control type="password" value="tester" />
           </Form.Group>
           <p className="text-muted text-right mb-3">ลืมรหัสผ่าน ?</p>
           <LoginButton type="button" onClick={submitLogin} disabled={loading}>

@@ -30,3 +30,19 @@ body {
 .swiper-button-prev::after {
   display: none;
 }
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.container .dropdown .dropdown-menu a:hover {
+  color: #fff;
+  background-color: white;
+  border-color: #fff;
+}
+
+.dropdown-item.active {
+  color: #fff;
+  background-color: #eaf0f3;
+  border-color: #fff;
+}

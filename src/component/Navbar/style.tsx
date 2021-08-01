@@ -14,6 +14,19 @@ export const LoginButton = styled.button`
   }
 `;
 
+export const LogoutButton = styled.button`
+  background-color: ${DARK_PINK};
+  padding: 0.35rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: ${DARK_PINK_HOVER};
+  }
+`;
+
 export const LogoBrand = styled.img`
   height: 80px;
   width: 80px;

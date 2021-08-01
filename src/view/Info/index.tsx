@@ -1,13 +1,12 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { ProfileImage } from "./style";
+import { Row, Col, Form, Button } from "react-bootstrap";
+import { ProfileImage, Section } from "./style";
 import { BsPerson } from "react-icons/bs";
-import { RedeemHistory } from "./component";
 import { ResearchExample } from "../../asset/images";
 
 function Info() {
   return (
-    <Container className="pt-3">
+    <Section className="pt-3 mb-5">
       <br></br>
       <h5>
         <BsPerson className="pr-2 h2"></BsPerson>ข้อมูลผู้ใช้งาน
@@ -36,16 +35,13 @@ function Info() {
               <Form.Label className="text-muted">ที่อยู่จัดส่ง</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="light" type="submit">
               อัพเดทข้อมูล
             </Button>
           </Form>
         </Col>
       </Row>
-      <br></br>
-      <hr></hr>
-      <RedeemHistory></RedeemHistory>
-    </Container>
+    </Section>
   );
 }
 

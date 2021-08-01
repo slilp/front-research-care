@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { DARK_PINK, DARK_PINK_HOVER, BLUE } from "../../style/constant";
 
 export const Section = styled(Container)`
-  height: 80vh;
+  min-height: 80vh;
 `;
 
 export const CardLogin = styled.div`
